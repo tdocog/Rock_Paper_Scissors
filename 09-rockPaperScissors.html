@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rock Paper Scissors</title>
+
+        <link rel="stylesheet" href="09-rock-paper-scissors.css">
+
+    </head>
+    <body>
+        
+        <p class="title">Rock Paper Scissors</p>
+
+        <button class="move-button" onclick="
+            computerMove();
+            findWinner('Rock', computerMove())
+        "><img src="images/Rock-emoji.png" class="move-icon"></button>
+
+        <button class="move-button" onclick="
+            computerMove();
+            findWinner('Paper', computerMove())
+        "><img src="images/Paper-emoji.png" class="move-icon"></button>
+
+        <button class="move-button" onclick="
+            computerMove();
+            findWinner('Scissors', computerMove())
+        "><img src="images/Scissors-emoji.png" class="move-icon"></button>
+
+        <p class="resultDisplay"></p>
+        <p class="choiceDisplay"></p>
+        <p class="displayScore"></p>
+
+        <button class="reset-button" onclick="
+            score['Wins'] = 0;
+            score['Losses'] = 0;
+            score['Ties'] = 0;
+            updateScore()
+        ">Reset Score</button>
+
+        <script src="09-rock-paper-scissors.js"> </script>
+
+    </body>
+</html>
